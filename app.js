@@ -9,6 +9,6 @@ app.get('/', (req, res) => {
     res.render('index.ejs')
 })
 
-app.listen(port, () => {
-    console.log('Listening to ' + (port))
+app.listen(process.env.PORT, () => {
+    console.log('Listening to ' + process.env.PORT)
 })
