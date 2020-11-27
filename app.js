@@ -8,7 +8,7 @@ const dbURI = 'mongodb+srv://users:cleancartel123@cluster0.tfjqc.mongodb.net/use
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
-        app.listen(process.env.PORT || port)
+        app.listen(process.env.PORT || port, () => console.log('Listening to ' + (process.env.PORT || port)))
         console.log('db connected');
     })
     .catch(err => console.log(err))
@@ -21,8 +21,5 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
     res.render('index.ejs')
 })
+
 app.use(userRoute);
-// app.listen(process.env.PORT, () => {
-//     console.log('Listening to ' + process.env.PORT)
-// })
-// app.listen(port)
