@@ -70,14 +70,14 @@ window.addEventListener('scroll', () => {
         nav.style.position = 'fixed';
         nav.style.height = '12.5vh';
         nav.style.boxShadow = '3px 3px 5px rgb(172, 172, 172)';
-        triplet.style.display = 'none';
+        // triplet.style.display = 'none';
         navImg.style.height = '7.5vh';
     }
     else if (scrolly == 0 && winHeught > 800) {
         nav.style.position = 'unset'
         nav.style.boxShadow = 'none';
         nav.style.height = '20vh';
-        triplet.style.display = 'flex';
+        // triplet.style.display = 'flex';
         navImg.style.height = '12.5vh';
     }
     else if (scrolly == 0 && winHeught < 800) {

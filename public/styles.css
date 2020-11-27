@@ -17,13 +17,15 @@ body {
 
  nav {
      display: flex;
-     align-items: center;
      justify-content: space-around;
+     align-items: center;
      height: 20vh;
-     width: 100%;
+     width: 100%; 
      backdrop-filter: blur(5px);
      z-index: 10;
+     /* border:2px solid black; */
 }
+
 
  nav ul{
      list-style: none;
@@ -38,10 +40,38 @@ body {
 nav ul .logo {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 9%;
     transform: translate(-50%,-50%);
-    height: 12vh;
+    height: 15vh;
+   
 }
+nav ul .nav-links{
+    position: fixed;
+    display: flex;
+    top: 50%;
+    left: 80%;
+    background-color:royalblue ;
+    height:100vh;
+    width: 100%;
+    flex-direction: column;
+    display:none;
+}
+
+nav .hamburger .line{
+    height:3px;
+    width:30px;
+    color:indigo;
+    margin:5px;
+}
+/* nav{
+    position: relative;
+} */
+nav .hamburger{
+    position: absolute;
+    top:20%;
+    right:5%;
+}
+
 
  nav ul li ul {
      display: flex;
