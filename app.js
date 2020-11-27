@@ -8,7 +8,7 @@ const dbURI = 'mongodb+srv://users:cleancartel123@cluster0.tfjqc.mongodb.net/use
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
-        app.listen(5000)
+        app.listen(process.env.PORT || port)
         console.log('db connected');
     })
     .catch(err => console.log(err))
