@@ -1,7 +1,7 @@
 const user = require('../models/userModel');
 var count = 0
 const limit = 100
-const alert = require('alert')
+// const alert = require('alert')
 
 const create_user = (req, res) => {
     const User = new user(req.body)
@@ -11,17 +11,13 @@ const create_user = (req, res) => {
         .exec((err, userr) => {
             if (userr) {
                 console.log('Email is taken')
-                alert('Email is already taken')
-                res.redirect('/')
-
-                // res.json({ message: 'Email is taken' })
-                // res.send(`
-                //     <h1>Email is Taken</h1>
-                //     <h2>Redirecting to Home Paged</h2>
-                //     <script>setInterval(()=>{
-                //         window.location.href='/'
-                //     },2000)</script>
-                // `)
+                // alert('Email is already taken')
+                res.send(`
+                    <script>setTimeout(()=>{
+                        alert('Email is already taken')
+                        window.location.href='/'
+                    },1)</script>
+                `)
                 // res.redirect('/') //Redirect to payment gateaway
             }
             else {
@@ -30,16 +26,26 @@ const create_user = (req, res) => {
                         if (user) {
                             console.log('PhoneNumber is taken')
                             res.json({ message: 'Phonenumber is taken' })
-                            res.redirect('/') //Redirect to payment gateaway
+                            res.send(`
+                                <script>setTimeout(()=>{
+                                    alert('Phonenumber is already taken')
+                                    window.location.href='/'
+                                },1)</script>
+                            `)
                         }
-                        else if (count >= limit) {
-                            console.log('Limit reached')
-                            User.save()
-                                .then((result) => {
-                                    res.redirect('/') //Redirect to payment gateaway
-                                })
-                                .catch((err) => { console.log(err) })
-                        }
+                        // else if (count >= limit) {
+                        //     console.log('Limit reached')
+                        //     User.save()
+                        //         .then((result) => {
+                        //             res.send(`
+                        //             <script>setTimeout(()=>{
+                        //                 alert('100 users has been reached')
+                        //                 window.location.href='/'
+                        //             },1)</script>
+                        //         `)
+                        //         })
+                        //         .catch((err) => { console.log(err) })
+                        // }
                         else {
                             User.save()
                                 .then((result) => {
