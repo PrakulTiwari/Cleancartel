@@ -236,17 +236,28 @@ nav .hamburger{
     font-size: 1rem;
     text-align: center;
 }
- @keyframes blur {
-     0% {
-         filter: blur(0px);
-     }
-     50% {
-         filter: blur(10px);
-     }
-     100% {
-         filter: blur(0px);
-     }
- }
+
+form{
+    display:flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    border: 2px solid black ;
+    padding:20px;
+}
+
+form input {
+    align-self: flex-start;
+    height: 50px;
+    width: 300px;
+}
+form label{
+    align-self: flex-start;
+}
 
 
  /* Mobile devices below */

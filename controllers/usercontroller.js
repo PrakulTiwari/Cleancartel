@@ -1,26 +1,38 @@
 const user = require('../models/userModel');
+var count = 0
+const limit = 100
 
 const create_user = (req, res) => {
     const User = new user(req.body)
-    const { name, email, phonenumber, address } = req.body
+    const { name, email, phoneNumber, address } = req.body
 
     user.findOne({ email })
-        .exec((err, user) => {
-            if (user) {
+        .exec((err, userr) => {
+            if (userr) {
                 console.log('Email is taken')
-                res.redirect('/')
+                res.redirect('/') //Redirect to payment gateaway
             }
             else {
-                user.findOne({ phonenumber })
+                user.findOne({ phoneNumber })
                     .exec((err, user) => {
                         if (user) {
-                            console.log('Phonenumber is taken')
-                            res.redirect('/')
+                            console.log('PhoneNumber is taken')
+                            res.redirect('/') //Redirect to payment gateaway
+                        }
+                        else if (count >= limit) {
+                            console.log('Limit reached')
+                            User.save()
+                                .then((result) => {
+                                    res.redirect('/') //Redirect to payment gateaway
+                                })
+                                .catch((err) => { console.log(err) })
                         }
                         else {
                             User.save()
                                 .then((result) => {
-                                    res.redirect('/')
+                                    count += 1
+                                    console.log(count)
+                                    res.redirect('/') //Redirect to home and payment placed
                                 })
                                 .catch((err) => { console.log(err) })
                         }
