@@ -9,13 +9,64 @@
     margin: 0;
     box-sizing: border-box;
     font-family: var(--pop);
+    overflow-x: hidden;
 }
+/* nav{
+height:10vh;
+background: #0C0324;
+position: relative;
+} */
+/* .nav-links{
 
-body {
-    height: 200vh;
+
+width:50%;
+height: 100%;
+
+align-items:center;
+margin-left: auto;
+} */
+/* nav .nav-links{
+    display:flex;
+    position: fixed;
+    list-style: none;
+    background: #0C0324;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+    clip-path: circle(0px at 90% -10%);
+    -webkit-clip-path:circle(0px at 90% -10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
 }
+nav .nav-links.open{
+clip-path:circle(1000px at 90% -10%);
+-webkit-clip-path:circle(1000px at 90% -10%);
+pointer-events: all;
 
- nav {
+}
+nav .nav-links li a{
+color: white;
+text-decoration: none;
+font-size: 16px;
+}
+nav .line{
+width:30px;
+height:3px;
+background:white;
+margin:5px;
+}
+nav .hamburger{
+position: absolute;
+cursor: pointer;
+right: 5%;
+top: 50%;
+transform: translate(-5%,-50%);
+z-index: 3;
+} */
+ /* nav {
      display: flex;
      justify-content: space-around;
      align-items: center;
@@ -24,10 +75,10 @@ body {
      backdrop-filter: blur(5px);
      z-index: 10;
      /* border:2px solid black; */
-}
+/* } */
 
 
- nav ul{
+ /* nav ul{
      list-style: none;
      display: flex;
      align-items: center;
@@ -35,8 +86,8 @@ body {
      flex-direction: row;
      width: 100%;
      position: relative;
- }
-
+ } */
+/* 
 nav ul .logo {
     position: absolute;
     top: 50%;
@@ -62,23 +113,23 @@ nav .hamburger .line{
     width:30px;
     color:indigo;
     margin:5px;
-}
+} */
 /* nav{
     position: relative;
 } */
-nav .hamburger{
+/* nav .hamburger{
     position: absolute;
     top:20%;
     right:5%;
-}
+} */
 
 
- nav ul li ul {
+ /* nav ul li ul {
      display: flex;
      align-items: center;
      justify-content: center;
      margin-left: 2.5vw;
- }
+ } */ 
 
  .intro {
      display: flex;
@@ -87,6 +138,7 @@ nav .hamburger{
      width: 100%;
      padding-bottom: 5vh;
      flex-direction: column;
+     margin-top: 20vh;
  }
 
  .intro img {
@@ -111,7 +163,7 @@ nav .hamburger{
     color: gold;
     animation: text 2s linear infinite;
     width: 150px;
-    text-align: end;
+    text-align: center;
 }
 @keyframes text{
     0%{
@@ -263,7 +315,7 @@ form label{
  /* Mobile devices below */
  @media(max-width:800px) {
      
-     nav ul .triplet {
+     /* nav ul .triplet {
          display: none !important;
      }
 
@@ -277,7 +329,7 @@ form label{
 
      nav{
          height: 12.5vh;
-     }
+     } */
 
      .services .imgs {
         flex-direction: column;
@@ -300,6 +352,12 @@ form label{
     .services .imgs .img h3{
         margin-top: 7px;
     
+    }
+    form{
+        left:0;
+    }
+    form input{
+        width: 100px;
     }
  }
 

@@ -1,6 +1,3 @@
-const nav = document.querySelector('nav')
-const navImg = document.querySelector('nav .logo')
-const triplet = document.querySelector('nav ul li ul')
 const restoration = document.querySelector('.intro .restoration')
 const restorationAfter = document.querySelector('.intro .restoration-after')
 const heading = document.querySelector('.intro .change')
@@ -60,33 +57,31 @@ const update = () => {
     }, 5000)
 }
 
-
-
-window.addEventListener('scroll', () => {
-    const scrolly = window.scrollY;
-    const winHeught = window.innerWidth;
-    // console.log(winHeught)
-    if (scrolly > 100) {
-        nav.style.position = 'fixed';
-        nav.style.height = '12.5vh';
-        nav.style.boxShadow = '3px 3px 5px rgb(172, 172, 172)';
-        // triplet.style.display = 'none';
-        navImg.style.height = '7.5vh';
-    }
-    else if (scrolly == 0 && winHeught > 800) {
-        nav.style.position = 'unset'
-        nav.style.boxShadow = 'none';
-        nav.style.height = '20vh';
-        // triplet.style.display = 'flex';
-        navImg.style.height = '12.5vh';
-    }
-    else if (scrolly == 0 && winHeught < 800) {
-        nav.style.position = 'unset'
-        nav.style.boxShadow = 'none';
-        nav.style.height = '12.5vh';
-        navImg.style.height = '7.5vh';
-    }
-})
+// window.addEventListener('scroll', () => {
+//     const scrolly = window.scrollY; 
+//     const winHeught = window.innerWidth;
+//     // console.log(winHeught)
+//     if (scrolly > 100) {
+//         nav.style.position = 'fixed';
+//         nav.style.height = '12.5vh';
+//         nav.style.boxShadow = '3px 3px 5px rgb(172, 172, 172)';
+//         // triplet.style.display = 'none';
+//         navImg.style.height = '7.5vh';
+//     }
+//     else if (scrolly == 0 && winHeught > 800) {
+//         nav.style.position = 'unset'
+//         nav.style.boxShadow = 'none';
+//         nav.style.height = '20vh';
+//         // triplet.style.display = 'flex';
+//         navImg.style.height = '12.5vh';
+//     }
+//     else if (scrolly == 0 && winHeught < 800) {
+//         nav.style.position = 'unset'
+//         nav.style.boxShadow = 'none';
+//         nav.style.height = '12.5vh';
+//         navImg.style.height = '7.5vh';
+//     }
+// })
 
 
 

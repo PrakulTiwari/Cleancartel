@@ -6,40 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CleanCartel India | A Place For Shoe Drycleaning</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav.css">
     <script src="script.js" defer></script>
+    <script src="nav.js" defer></script>
 </head>
 
 <body>
-    <nav>
-        <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-        <ul>
-            <!-- <li>
-                <ul>
-                    <li>
-                        <img src="./images/value1.svg" alt="" class="triplet" style="height: 15vh;">
-                    </li>
-                    <li>
-                        <img src="./images/value2.svg" alt="" class="triplet" style="height: 15vh;">
-                    </li>
-                    <li>
-                        <img src="./images/FIRST 100 Orders free.svg" alt="" class="triplet" style="height: 15vh;">
-                    </li>
-                </ul>
-            </li> -->
-            <li>
-
-                <img src="./images/IMG-20201124-WA0025.jpg" class='logo' alt="">
-                <class class="nav-links">
-                    <a href="#">About</a>
-                    <a href="#">Contact Us</a>
-                </class>
-            </li>
-        </ul>
-    </nav>
+    <%- include('./helpers/nav.ejs') %>
     <section class="intro">
         <div class="heading">
             <p class="change"></p>
@@ -48,7 +21,7 @@
         <img class="restoration" src="" alt="">
         <div class="bar"></div>
     </section>
-    <div class="services">
+    <div class="services" id="services">
         <h1 style="margin-bottom: 25px;letter-spacing: 4px;">OUR SERVICES</h1>
         <div class="imgs">
             <div class="img">
@@ -77,7 +50,7 @@
             </div>
         </div>
     </div>
-    <div class="process">
+    <div class="process" id="process">
         <h1 style="letter-spacing: 4px;">HOW IT WORKS</h1>
         <p>Shoe restoration,shoe repair,cleansing,refreshing,suede shoe cleaning</p>
         <div class="processimg">
