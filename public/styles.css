@@ -11,6 +11,9 @@
     font-family: var(--pop);
     overflow-x: hidden;
 }
+html{
+    scroll-behavior: smooth;
+}
 /* nav{
 height:10vh;
 background: #0C0324;
