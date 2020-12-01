@@ -355,9 +355,11 @@ form label{
     }
     form{
         left:0;
+        width: 100%;
     }
     form input{
-        width: 100px;
+        width: 300px;
+        height: 40px;
     }
  }
 

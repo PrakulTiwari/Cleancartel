@@ -12,12 +12,12 @@ const create_user = (req, res) => {
             if (userr) {
                 console.log('Email is taken')
                 // alert('Email is already taken')
-                res.send(`
-                    <script>setTimeout(()=>{
-                        alert('Email is already taken')
-                        window.location.href='/'
-                    },1)</script>
-                `)
+                // res.send(`
+                //     <script>setTimeout(()=>{
+                //         alert('Email is already taken')
+                //         window.location.href='/'
+                //     },1)</script>
+                // `)
                 // res.redirect('/') //Redirect to payment gateaway
             }
             else {
@@ -26,12 +26,12 @@ const create_user = (req, res) => {
                         if (user) {
                             console.log('PhoneNumber is taken')
                             res.json({ message: 'Phonenumber is taken' })
-                            res.send(`
-                                <script>setTimeout(()=>{
-                                    alert('Phonenumber is already taken')
-                                    window.location.href='/'
-                                },1)</script>
-                            `)
+                            // res.send(`
+                            //     <script>setTimeout(()=>{
+                            //         alert('Phonenumber is already taken')
+                            //         window.location.href='/'
+                            //     },1)</script>
+                            // `)
                         }
                         // else if (count >= limit) {
                         //     console.log('Limit reached')

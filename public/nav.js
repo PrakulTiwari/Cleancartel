@@ -5,12 +5,12 @@ const filling3 = document.querySelector('nav .logo-burger .burger .filling3');
 const menu = document.querySelector('nav .menu');
 
 var clicks = 0;
-burger.onclick = function() {
+burger.onclick = function () {
     clicks += 1;
 };
 
 var mouses = 0;
-burger.onmouseenter = function() {
+burger.onmouseenter = function () {
     mouses += 1;
 };
 
@@ -29,10 +29,10 @@ burger.addEventListener('click', () => {
         menu.style.animation = 'menu 0.5s linear';
     }
     else {
-        burger.style.border = '3px solid rgb(223, 223, 223)';
-        filling1.style.background = 'rgb(223, 223, 223)';
-        filling2.style.background = 'rgb(223, 223, 223)';
-        filling3.style.background = 'rgb(223, 223, 223)';
+        burger.style.border = '3px solid #ffd700';
+        filling1.style.background = '#ffd700';
+        filling2.style.background = '#ffd700';
+        filling3.style.background = '#ffd700';
         filling1.style.transform = 'rotateZ(0deg)';
         filling1.style.animation = 'filling1RotateBack 0.4s linear';
         filling3.style.transform = 'rotateZ(0deg)';
@@ -58,10 +58,10 @@ burger.addEventListener('mouseenter', () => {
         menu.style.animation = 'menu 0.5s linear';
     }
     else {
-        burger.style.border = '3px solid rgb(223, 223, 223)';
-        filling1.style.background = 'rgb(223, 223, 223)';
-        filling2.style.background = 'rgb(223, 223, 223)';
-        filling3.style.background = 'rgb(223, 223, 223)';
+        burger.style.border = '3px solid #ffd700';
+        filling1.style.background = '#ffd700';
+        filling2.style.background = '#ffd700';
+        filling3.style.background = '#ffd700';
         filling1.style.transform = 'rotateZ(0deg)';
         filling1.style.animation = 'filling1RotateBack 0.4s linear';
         filling3.style.transform = 'rotateZ(0deg)';
