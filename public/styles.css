@@ -9,7 +9,6 @@
     margin: 0;
     box-sizing: border-box;
     font-family: var(--pop);
-    overflow-x: hidden;
 }
 html{
     scroll-behavior: smooth;
@@ -142,6 +141,7 @@ nav .hamburger .line{
      padding-bottom: 5vh;
      flex-direction: column;
      margin-top: 20vh;
+     overflow-x: hidden;
  }
 
  .intro img {
@@ -268,8 +268,8 @@ nav .hamburger .line{
     padding-top: 27px;
 }
 .process .processimg img{
-    height:35vh;
-    width: 22vw;
+    /* height:20vh; */
+    width: 80vw;
 }
 
 .process h1{
@@ -303,6 +303,7 @@ form{
     left: 50%;
     border: 2px solid black ;
     padding:20px;
+    z-index: 5;
 }
 
 form input {
@@ -349,12 +350,27 @@ form label{
     .intro .change {
         width: 110px;
     }
+    
     .services .imgs .img p{
         left: 58%;
     } 
     .services .imgs .img h3{
         margin-top: 7px;
     
+    }
+    .process{
+        flex-direction: column;
+    }
+    .process p{
+        text-align: center;
+    }
+    .process .processimg {
+        flex-direction: column;
+        align-items: center;
+    }
+    .process .processimg img{
+        align-items: center;
+        /* height: 30vh; */
     }
     form{
         left:0;
@@ -368,5 +384,7 @@ form label{
 
  /* Desktop, PC, Laptop Devices Below */
  @media(min-width: 800px) {
-    
+    .process .processimg img{
+        width: 22vw;
+    }
  }
