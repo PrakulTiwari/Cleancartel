@@ -157,6 +157,7 @@ body {
 {
     .form {
         padding:50px;
+        background-attachment: unset;
     }
     .form .container{
         flex-direction: column;
