@@ -9,6 +9,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: var(--pop);
+    /* border:3px solid red; */
 }
 html{
     scroll-behavior: smooth;
@@ -292,7 +293,7 @@ nav .hamburger .line{
     text-align: center;
 }
 
-form{
+/* form{
     display:flex;
     justify-content: space-around;
     flex-direction: column;
@@ -313,7 +314,7 @@ form input {
 }
 form label{
     align-self: flex-start;
-}
+} */
 
 
  /* Mobile devices below */
@@ -372,14 +373,14 @@ form label{
         align-items: center;
         /* height: 30vh; */
     }
-    form{
+    /* form{
         left:0;
         width: 100%;
     }
     form input{
         width: 300px;
         height: 40px;
-    }
+    } */
  }
 
  /* Desktop, PC, Laptop Devices Below */

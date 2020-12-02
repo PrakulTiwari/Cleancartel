@@ -1,6 +1,66 @@
-<form action="/userorder" method="POST" id="form">
-    <!-- <div class="emailtaken"></div> -->
-    <label for="name">Name</label>
+<body>
+    <div class="form">
+        <div class="content">
+            <h2>Book Your Service</h2>
+            <p>Try it for free first time.</p>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa fa-map-marker"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>MIG 46/3A SAKET NAGAR,<br>Bhopal</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>
+                            9993045101</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fa fa-envelope-o"></i>
+                    </div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>help.cleancartel@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm">
+                <form action="/userorder" method="POST" id="form">
+                    <h2>Book Your Shoe Service</h2>
+                    <div class="inputBox">
+                        <input type="text" name="name" required>
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" name="email" required>
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="number" name="phoneNumber" required>
+                        <span>Phone Number</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea name="address" required></textarea>
+                        <span>Address</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" value="Send">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- <form action="/userorder" method="POST" id="form">
+    <div class="emailtaken"></div> -->
+<!-- <label for="name">Name</label>
     <input type="text" id="name" name="name" required>
     <label for="email">Email</label>
     <input type="email" id="email" name="email" required>
@@ -8,8 +68,8 @@
     <input type="number" id="number" name="phoneNumber" required>
     <label for="address">Address:</label>
     <textarea id="address" required name="address"></textarea>
-    <button>Submit</button>
-    <!-- <script src="https://checkout.razorpay.com/v1/payment-button.js"
+    <button>Submit</button> -->
+<!-- <script src="https://checkout.razorpay.com/v1/payment-button.js"
                 data-payment_button_id="pl_G6w516u45TVu6S"> </script> -->
 
-</form>
+<!-- </form> -->
