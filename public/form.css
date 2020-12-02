@@ -172,5 +172,8 @@ body {
     {
         width: 100%;
     }
+    .form .container .contactInfo .box{
+        flex-wrap: wrap;
+    }
    
  }
