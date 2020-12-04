@@ -24,7 +24,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: url(./images/pexels-kaboompics-com-6111.jpg);
+    /* background: url(./images/pexels-kaboompics-com-6111.jpg); */
     background-size: cover;
     background-attachment: fixed;
 }
