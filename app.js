@@ -4,6 +4,10 @@ const app = express();
 const mongoose = require('mongoose');
 const userRoute = require('./routes/userRoutes')
 
+var promos = [
+    'FIRSTFREE'
+]
+
 const dbURI = 'mongodb+srv://users:cleancartel123@cluster0.tfjqc.mongodb.net/users?retryWrites=true&w=majority';
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -19,7 +23,11 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.get('/', (req, res) => {
-    res.render('index.ejs')
+    res.render('index.ejs', { promos })
+})
+
+app.get('/success', (req, res) => {
+    res.render('success.ejs')
 })
 
 app.use(userRoute);

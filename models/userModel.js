@@ -17,6 +17,15 @@ const newUser = new Schema({
     address: {
         type: String,
         required: true
+    },
+    paymentmode: {
+        type: String,
+        required: true
+    },
+    pairs: {
+        type: Number,
+        required: true,
+        default: 1
     }
 }, { timestamps: true });
 

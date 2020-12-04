@@ -2,6 +2,7 @@ const restoration = document.querySelector('.intro .restoration')
 const restorationAfter = document.querySelector('.intro .restoration-after')
 const heading = document.querySelector('.intro .change')
 const introbar = document.querySelector('.intro .bar')
+var verified = false
 
 const headtext = [
     'NORMAL',
@@ -9,15 +10,33 @@ const headtext = [
     'PREMIUM'
 ]
 const images = [
-    "https://shoespa.co.uk/wp-content/uploads/2020/08/Gucci-A-Before.jpg",
-    "https://shoespa.co.uk/wp-content/uploads/2020/08/Balenciaga-B-Before.jpg",
-    "https://shoespa.co.uk/wp-content/uploads/2020/08/Churchs1.jpg",
-    "https://shoespa.co.uk/wp-content/uploads/2020/08/Chanel-bagbefore-b.jpg",
-    "https://shoespa.co.uk/wp-content/uploads/2020/08/07Saint_Laurent-before-1-2-2-copy.jpg",
-    "https://shoespa.co.uk/wp-content/uploads/2020/08/06Lacoste-before-1-2-copy.jpg",
-    "https://shoespa.co.uk/wp-content/uploads/2020/08/Louboutin-4-Before.jpg"
+    "./images/GucciEdit.png",
+    "./images/LacEdit.png",
+    "./images/LouLedit.png",
+    "./images/YSLedit.png",
+    "./images/LouMEdit.png",
+    "./images/LVedit.png",
+    "./images/BalEdit.png"
+
 ]
 var j = 0;
+
+// setInterval(() => {
+//     fetch('/')
+//         .then(result => result.json())
+//         .then(data => {
+//             verified = true;
+//             window.location.href = data.verified;
+//         })
+//         .catch(err => console.log(''))
+// }, 1)
+
+// window.onload(() => {
+//     if (verified) {
+//         document.querySelector('.razorpay script').click();
+//     }
+// })
+
 const updatetext = () => {
     heading.innerHTML = headtext[j];
     setInterval(() => {

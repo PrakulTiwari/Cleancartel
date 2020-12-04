@@ -147,7 +147,7 @@ nav .hamburger .line{
 
  .intro img {
     z-index: -1;
-    /* height: 50%; */
+    padding: 50px;
 }
 .intro .heading {
     display: flex;
@@ -189,10 +189,9 @@ nav .hamburger .line{
     align-items: center;
     overflow: hidden;
     flex-direction: column;
-    padding: 0 32vw;
     justify-content: space-around;
-    min-height: 120vh;
-   
+    height: 100vh;
+    width: 100vw;
 }
 .services .imgs {
     display: flex;
@@ -200,9 +199,10 @@ nav .hamburger .line{
     justify-content: space-around;
     flex-direction: row;
     width: 90vw;
+    padding: 15px;
 }
-.services img {
-    border-radius: 50%
+.services .imgs .img img {
+    border-radius: 50%;
 }
 .services h1{
  font-family: 'Montserrat';
@@ -228,7 +228,7 @@ nav .hamburger .line{
     left:65%;
     font-family: 'Montserrat';
     font-size: 18px;
-     width: max-content;
+    width: max-content;
     background: white;
     color: gold;
     padding:10px 15px;
@@ -244,7 +244,10 @@ nav .hamburger .line{
     color: indigo;
     font-weight: 700;
 }
-
+/* .services .imgs .img button{
+    align-items: center;
+    size: 20px;
+} */
  /* .intro .restoration {
      border: 2.5px solid gold;
      padding: 0 100px;
@@ -292,6 +295,14 @@ nav .hamburger .line{
     font-size: 1rem;
     text-align: center;
 }
+.footer h1{
+    font-size: 10px;
+    background-color: #0C0324;
+    color: white;
+    text-align: center;
+    width: 100vw;
+    padding: 20px 400px;
+}
 
 /* form{
     display:flex;
@@ -335,13 +346,15 @@ form label{
      nav{
          height: 12.5vh;
      } */
-
      .services .imgs {
-        flex-direction: column;
+        flex-direction: row;
+        overflow-x: scroll;
+        width: 100vw;
+        justify-content: flex-start;
     }
 
     .services img {
-        margin: 20px;
+        margin: 0 20px;
     }
 
     .intro p {
@@ -359,6 +372,7 @@ form label{
         margin-top: 7px;
     
     }
+    
     .process{
         flex-direction: column;
     }
@@ -366,13 +380,25 @@ form label{
         text-align: center;
     }
     .process .processimg {
-        flex-direction: column;
+        flex-direction: row;
+        overflow-x: scroll;
+        width: 100vw;
+        justify-content: flex-start;
         align-items: center;
     }
     .process .processimg img{
         align-items: center;
         /* height: 30vh; */
     }
+    .footer h1{
+        font-size: 10px;
+        background-color: #0C0324;
+        color: white;
+        text-align: center;
+        width: 100vw;
+        padding: 0 10px;
+    }
+    
     /* form{
         left:0;
         width: 100%;

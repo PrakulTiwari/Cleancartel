@@ -5,35 +5,12 @@
             <p>Try it for free first time.</p>
         </div>
         <div class="container">
-            <div class="contactInfo">
-                <div class="box">
-                    <div class="icon"><i class="fa fa-map-marker"></i></div>
-                    <div class="text">
-                        <h3>Address</h3>
-                        <p>MIG 46/3A SAKET NAGAR,<br>Bhopal</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="icon"><i class="fa fa-phone"></i></div>
-                    <div class="text">
-                        <h3>Phone</h3>
-                        <p>
-                            9993045101</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="icon">
-                        <i class="fa fa-envelope-o"></i>
-                    </div>
-                    <div class="text">
-                        <h3>Email</h3>
-                        <p>help.cleancartel@gmail.com</p>
-                    </div>
-                </div>
-            </div>
+
             <div class="contactForm">
                 <form action="/userorder" method="POST" id="form">
                     <h2>Book Your Shoe Service</h2>
+                    <h3 style="color: white;font-size: 13px;">Apply Promo Code FIRSTFREE and get your first service for
+                        free</h3>
                     <div class="inputBox">
                         <input type="text" name="name" required>
                         <span>Full Name</span>
@@ -50,26 +27,89 @@
                         <textarea name="address" required></textarea>
                         <span>Address</span>
                     </div>
-                    <div class="inputBox">
-                        <input type="submit" value="Send">
+                    <div class="dropDown">
+                        <select name="pairs" required>
+                            <option value="1">No. of Pairs</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                        </select>
                     </div>
-                </form>
+                    <div class="dropDown">
+                        <select name="paymentmode" required>
+                            <option value="cod">Cash on Delivery</option>
+                            <option value="gateaway">Payment Gateaway</option>
+                        </select>
+                    </div>
+                    <div class="inputBox">
+                        <input name="promo" required>
+                        <span class="promo">Promo Code</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" value="Apply">
+                    </div>
+                    <div class="inputBox">
+                        <h2>Cost:</h2>
+                        <h2 class="cost">₹159</h2>
+                        <input type="submit" value="Book">
+                    </div>
+                    <!-- </form>
+                <form class='razorpay'>
+                    <script src="https://checkout.razorpay.com/v1/payment-button.js"
+                        data-payment_button_id="pl_G6w516u45TVu6S"> </script> -->
+
+            </div>
+            <div class="contactInfo">
+                <!-- <div class="box">
+                    <div class="icon"><i class="fa fa-map-marker"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>MIG 46/3A SAKET NAGAR,<br>Bhopal</p>
+                    </div> -->
+                <!-- </div> -->
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>
+                            9993045101</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <i class="fa fa-envelope-o"></i>
+                    </div>
+                    <div class="text mail">
+                        <h3>Email</h3>
+                        <p>support@cleancartel.in</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</body>
-<!-- <form action="/userorder" method="POST" id="form">
-    <div class="emailtaken"></div> -->
-<!-- <label for="name">Name</label>
-    <input type="text" id="name" name="name" required>
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" required>
-    <label for="number">Phone Number:</label>
-    <input type="number" id="number" name="phoneNumber" required>
-    <label for="address">Address:</label>
-    <textarea id="address" required name="address"></textarea>
-    <button>Submit</button> -->
-<!-- <script src="https://checkout.razorpay.com/v1/payment-button.js"
-                data-payment_button_id="pl_G6w516u45TVu6S"> </script> -->
+    <script>
+        const promobtn = document.querySelector('input[value="Apply"]'),
+            area = document.querySelector('.promo'),
+            requset = document.querySelector('input[name="promo"]'),
+            cost = document.querySelector('h2.cost');
 
-<!-- </form> -->
+
+
+        promobtn.addEventListener('click', (e) => {
+            if (requset.value == 'FIRSTFREE') {
+                e.preventDefault()
+                area.innerHTML = 'Applied!';
+            }
+            else {
+                e.preventDefault()
+                area.innerHTML = 'Wrong Promo!'
+            }
+        })
+    </script>
+</body>

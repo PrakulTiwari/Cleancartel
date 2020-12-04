@@ -153,6 +153,9 @@ nav .menu {
         font-size: 1.25rem;
         font-weight: 500;
     }
+    nav .logo-burger{
+        padding-left: 0;
+    }
 
     @keyframes menu {
         0% {

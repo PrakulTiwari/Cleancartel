@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/IMG-20201124-WA0025.ico">
     <title>CleanCartel India | A Place For Shoe Drycleaning</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="form.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="script.js" defer></script>
     <script src="nav.js" defer></script>
 </head>
@@ -24,35 +25,9 @@
         <img class="restoration" src="" alt="">
         <div class="bar"></div>
     </section>
-    <div class="services" id="services">
-        <h1 style="margin-bottom: 25px;letter-spacing: 4px;">OUR SERVICES</h1>
-        <div class="imgs">
-            <div class="img">
-                <img src="./images/service1.jpg" class="img1" alt="">
-                <p>From ₹150</p>
-                <h3 class="head">Shoe Drycleaning</h3>
-                <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium assumenda ratione doloremque
-                    dolor quia nesciunt, deserunt facilis tenetur dolorum, cupiditate blanditiis amet recusandae
-                    corporis ab a consequuntur cumque exercitationem quidem!</h3>
-            </div>
-            <div class="img">
-                <img src="./images/service2.jpg" class="img2" alt="">
-                <p>From ₹150</p>
-                <h3 class="head">Shoe Repair</h3>
-                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus illo aperiam, debitis id
-                    neque, eos saepe voluptate porro ipsum accusantium nam voluptatibus? Itaque ipsa incidunt
-                    repudiandae sit natus consequuntur asperiores.</h3>
-            </div>
-            <div class="img">
-                <img src="./images/service5.jpg" class="img3" alt="">
-                <p>Coming soon</p>
-                <h3 class="head">Full Drycleaning</h3>
-                <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus provident aspernatur ex
-                    reprehenderit aut labore quas sequi officia nulla culpa aperiam iste, eveniet mollitia ipsum nemo
-                    error accusantium ad assumenda?</h3>
-            </div>
-        </div>
-    </div>
+    <%- include('./helpers/service.ejs') %>
+    <img src="./images/Blue and White Vote for Excellence 72x36 Landscape Campaign Banner (1).jpg" alt=""
+        style="width: 100vw;object-fit: cover;">
     <div class="process" id="process">
         <h1 style="letter-spacing: 4px;">HOW IT WORKS</h1>
         <p>Shoe restoration,shoe repair,cleansing,refreshing,suede shoe cleaning</p>
@@ -62,21 +37,23 @@
                 <p>1.Book our service from our website</p>
             </div>
             <div class="step">
-                <img src="./images/4.png" alt="">
+                <img src="./images/5.png" alt="">
                 <p>2.We'll Pick up your items</p>
             </div>
             <div class="step">
-                <img src="./images/5.png" alt="">
+                <img src="./images/4.png" alt="">
                 <p>3.We carefully restore your items</p>
             </div>
             <div class="step">
-                <img src="./images/6.png" alt="">
+                <img src="./images/7.png" alt="">
                 <p>4.You recieve your perfectly restored items.</p>
             </div>
         </div>
     </div>
+    <img src="./images/Blue and White Vote for Excellence 72x36 Landscape Campaign Banner.jpg" alt=""
+        style="width: 100vw;object-fit: cover;">
     <%- include('./helpers/form.ejs') %>
-
+    <%- include('./helpers/footer.ejs') %>
 </body>
 
 </html>
