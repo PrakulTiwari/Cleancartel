@@ -1,16 +1,9 @@
 <body>
     <div class="form">
-        <div class="content">
-            <h2>Book Your Service</h2>
-            <p>Try it for free first time.</p>
-        </div>
         <div class="container">
-
             <div class="contactForm">
                 <form action="/userorder" method="POST" id="form">
-                    <h2>Book Your Shoe Service</h2>
-                    <h3 style="color: white;font-size: 13px;">Apply Promo Code FIRSTFREE and get your first service for
-                        free</h3>
+                    <h2>Book Your Order</h2>
                     <div class="inputBox">
                         <input type="text" name="name" required>
                         <span>Full Name</span>
@@ -48,15 +41,18 @@
                         </select>
                     </div>
                     <div class="inputBox">
-                        <input name="promo" required>
+                        <input name="promo">
                         <span class="promo">Promo Code</span>
                     </div>
                     <div class="inputBox">
                         <input type="submit" value="Apply">
                     </div>
                     <div class="inputBox">
-                        <h2>Cost:</h2>
-                        <h2 class="cost">₹159</h2>
+                        <div
+                            style="display: flex;align-items: flex-start;justify-content: flex-start;flex-direction: row;">
+                            <h2>Sub Total:</h2>
+                            <h2 class="cost">₹159</h2>
+                        </div>
                         <input type="submit" value="Book">
                     </div>
                     <!-- </form>
@@ -100,21 +96,25 @@
             cost = document.querySelector('h2.cost'),
             pair = document.querySelector('select[name="pairs"]');
 
+        var price = pair.value * 159;
+        var discount = 0;
+
         promobtn.addEventListener('click', (e) => {
             if (requset.value == 'FIRSTFREE') {
                 e.preventDefault()
                 area.innerHTML = 'Applied!'
-                cost.innerHTML = '₹0'
+                discount = 159;
             }
             else {
                 e.preventDefault()
                 area.innerHTML = 'Wrong Promo!'
+                discount = 0
             }
         })
 
         setInterval(() => {
             console.log(pair.value)
-            const price = pair.value * 159;
+            price = pair.value * 159 - discount;
             cost.innerHTML = '₹' + price;
         }, 1000)
     </script>
