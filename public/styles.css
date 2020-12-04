@@ -219,7 +219,7 @@ nav .hamburger .line{
     transition: 1s;
 }
 .services .imgs .img{
-    /* border:1px solid black; */
+    border:2px solid black;
     position: relative;
 }
 .services .imgs .img p{
