@@ -6,8 +6,7 @@ var verified = false
 
 const headtext = [
     'NORMAL',
-    'LUXURY',
-    'PREMIUM'
+    'LUXURY'
 ]
 const images = [
     "./images/GucciEdit.png",
@@ -40,7 +39,7 @@ var j = 0;
 const updatetext = () => {
     heading.innerHTML = headtext[j];
     setInterval(() => {
-        if (j < 2) {
+        if (j < 1) {
             j += 1;
         }
         else {
@@ -49,7 +48,7 @@ const updatetext = () => {
         heading.innerHTML = headtext[j];
         // heading.style.animation = 'text 0.5s ease-out'
         // setTimeout(() => heading.style.animation = 'none', 500)
-    }, 1000)
+    }, 2000)
 }
 
 var i = 0;

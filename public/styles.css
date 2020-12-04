@@ -165,7 +165,7 @@ nav .hamburger .line{
     padding-right: 5px;
     font-weight: 500;
     color: gold;
-    animation: text 2s linear infinite;
+    animation: text 4s linear infinite;
     width: 150px;
     text-align: center;
 }

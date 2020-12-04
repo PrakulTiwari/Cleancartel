@@ -193,8 +193,10 @@ body {
         width: 100vw;
     }
     .form .container .contactInfo .box{
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         width: 100%;
+        align-items: flex-start;
+        justify-content: flex-start;
     }
     .form .container{
         width: 100vw;
