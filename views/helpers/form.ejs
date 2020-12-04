@@ -97,19 +97,25 @@
         const promobtn = document.querySelector('input[value="Apply"]'),
             area = document.querySelector('.promo'),
             requset = document.querySelector('input[name="promo"]'),
-            cost = document.querySelector('h2.cost');
-
-
+            cost = document.querySelector('h2.cost'),
+            pair = document.querySelector('select[name="pairs"]');
 
         promobtn.addEventListener('click', (e) => {
             if (requset.value == 'FIRSTFREE') {
                 e.preventDefault()
-                area.innerHTML = 'Applied!';
+                area.innerHTML = 'Applied!'
+                cost.innerHTML = '₹0'
             }
             else {
                 e.preventDefault()
                 area.innerHTML = 'Wrong Promo!'
             }
         })
+
+        setInterval(() => {
+            console.log(pair.value)
+            const price = pair.value * 159;
+            cost.innerHTML = '₹' + price;
+        }, 1000)
     </script>
 </body>
