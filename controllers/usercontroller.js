@@ -50,13 +50,24 @@ const create_user = (req, res) => {
                             //         .catch((err) => { console.log(err) })
                             // }
                             else {
-                                User.save()
-                                    .then((result) => {
-                                        count += 1
-                                        console.log(count)
-                                        res.redirect('/success') //Redirect to home and payment placed
-                                    })
-                                    .catch((err) => { console.log(err) })
+                                if (pairs == 1) {
+                                    User.save()
+                                        .then((result) => {
+                                            count += 1
+                                            console.log(count)
+                                            res.redirect('/success') //Redirect to home and payment placed
+                                        })
+                                        .catch((err) => { console.log(err) })
+                                }
+                                else {
+                                    User.save()
+                                        .then((result) => {
+                                            count += 1
+                                            console.log(count)
+                                            res.redirect('https://rzp.io/l/cq2Ag7sE') //Redirect to home and payment placed
+                                        })
+                                        .catch((err) => { console.log(err) })
+                                }
                             }
                         })
                 }
@@ -64,13 +75,24 @@ const create_user = (req, res) => {
     }
 
     else {
-        User.save()
-            .then((result) => {
-                count += 1
-                console.log(count)
-                res.redirect('/success') //Redirect to home and payment placed
-            })
-            .catch((err) => { console.log(err) })
+        if (pairs == 1) {
+            User.save()
+                .then((result) => {
+                    count += 1
+                    console.log(count)
+                    res.redirect('/success') //Redirect to home and payment placed
+                })
+                .catch((err) => { console.log(err) })
+        }
+        else {
+            User.save()
+                .then((result) => {
+                    count += 1
+                    console.log(count)
+                    res.redirect('https://rzp.io/l/cq2Ag7sE') //Redirect to home and payment placed
+                })
+                .catch((err) => { console.log(err) })
+        }
     }
 }
 

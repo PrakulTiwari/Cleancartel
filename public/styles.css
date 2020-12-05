@@ -272,6 +272,15 @@ nav .hamburger .line{
     align-items: center;
     padding-top: 27px;
 }
+
+.process .processimg {
+    flex-direction: row;
+    overflow-x: scroll;
+    width: 100vw;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .process .processimg img{
     /* height:20vh; */
     width: 80vw;
